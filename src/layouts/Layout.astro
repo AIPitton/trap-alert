@@ -22,5 +22,59 @@ import '../styles/global.css'
   <body class="bg-neutral-950 overflow-x-hidden">
     <slot />
     <script type="module" src="/headerMapGuard.js"></script>
+    <script>
+      // Mobile hamburger menu injector: creates a simple overlay nav and toggles it
+      (function() {
+        function createMobileMenu() {
+          if (document.getElementById('mobile-nav-overlay')) return
+          const overlay = document.createElement('div')
+          overlay.id = 'mobile-nav-overlay'
+          overlay.className = 'fixed inset-0 z-50 bg-black/70 flex items-start justify-center p-6 md:hidden'
+          overlay.style.display = 'none'
+
+          const panel = document.createElement('nav')
+          panel.className = 'bg-neutral-900 rounded-lg w-full max-w-sm p-6 text-center space-y-4'
+
+          const links = [
+            { href: '/', label: 'Home' },
+            { href: '/map', label: 'Map' },
+            { href: '/contact', label: 'Contact' }
+          ]
+
+          links.forEach(l => {
+            const a = document.createElement('a')
+            a.href = l.href
+            a.innerText = l.label
+            a.className = 'block text-white text-lg py-2 rounded hover:bg-zinc-800'
+            panel.appendChild(a)
+          })
+
+          const close = document.createElement('button')
+          close.innerText = 'Close'
+          close.className = 'mt-4 px-4 py-2 rounded bg-zinc-700 text-white'
+          close.addEventListener('click', () => overlay.style.display = 'none')
+          panel.appendChild(close)
+
+          overlay.appendChild(panel)
+          document.body.appendChild(overlay)
+        }
+
+        function toggleMobileMenu() {
+          createMobileMenu()
+          const overlay = document.getElementById('mobile-nav-overlay')
+          if (!overlay) return
+          overlay.style.display = overlay.style.display === 'none' || overlay.style.display === '' ? 'flex' : 'none'
+        }
+
+        document.addEventListener('click', (e) => {
+          // delegate clicks on any #hamburger button to toggle the mobile menu
+          const hb = e.target.closest && e.target.closest('#hamburger')
+          if (hb) {
+            e.preventDefault()
+            toggleMobileMenu()
+          }
+        })
+      })()
+    </script>
   </body>
 </html>

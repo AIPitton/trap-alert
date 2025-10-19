@@ -9,6 +9,19 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.14.6"
+    "@astrojs/react": "^4.4.0",
+    "@tailwindcss/vite": "^4.1.14",
+    "alpinejs": "^3.15.0",
+    "astro": "^5.14.6",
+    "astro-leaflet": "^1.8.1",
+    "leaflet": "^1.9.4",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tailwindcss": "^4.1.14",
+    "tailwindcss-animated": "^2.0.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }

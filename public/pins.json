@@ -1,0 +1,5 @@
+[
+  { "id": 1, "lat": 48.12, "lng": 11.54, "title": "Alert A", "description": "Small detcord placement" },
+  { "id": 2, "lat": 48.122, "lng": 11.545, "title": "Alert B", "description": "Reported by user" },
+  { "id": 3, "lat": 48.118, "lng": 11.538, "title": "Alert C", "description": "Investigation required" }
+]

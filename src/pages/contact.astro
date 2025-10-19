@@ -1,0 +1,98 @@
+---
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="Contact">
+  <div class="absolute top-0 left-0 h-screen w-screen -z-10">
+    <svg version="1.1" viewBox="0 0 800 450"><defs><filter id="bbblurry-filter" x="-100%" y="-100%" width="400%" height="400%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB"> <feGaussianBlur stdDeviation="40" x="0%" y="0%" width="100%" height="100%" in="SourceGraphic" edgeMode="none" result="blur"></feGaussianBlur></filter></defs><g filter="url(#bbblurry-filter)"><ellipse rx="150" ry="150" cx="828.7406893643466" cy="177.05527288263494" fill="#442244"></ellipse><ellipse rx="150" ry="150" cx="-25.87494451349437" cy="33.814882451837704" fill="#442244"></ellipse></g></svg>
+  </div>
+
+  <main class="z-50 bg-transparent py-6 px-10 md:px-40">
+    <!-- HEADER (copied from index) -->
+    <header class="flex items-center relative">
+      <button id="hamburger" class="md:hidden text-white absolute right-0 text-xl"> ☰ </button>
+      <ul class="hidden md:flex gap-4 text-slate-300 mt-2 ml-20" id="menu">
+        <li><a href="/" class="hover:text-white">Trap Alert</a></li>
+        <li><a href="/map" class="hover:text-white">Map</a></li>
+        <div class="absolute top-0 right-0 text-slate-300">
+          <span class="cursor-pointer hover:text-white">Login</span>
+          <button class="cursor-pointer rounded-lg bg-gradient-to-r from-violet-950 via-zinc-700 to-yellow-900 p-0.5 ml-5 hover:shadow-md transition-shadow hover:shadow-black/50">
+            <div class="flex items-center justify-center bg-neutral-950 back rounded-lg">
+              <h1 class="text-white px-2 py-1">Create account</h1>
+            </div>
+          </button>
+        </div>
+      </ul>
+    </header>
+
+    <section class="mt-24 w-auto justify-center items-center flex flex-col">
+      <div class="bg-zinc-900 w-full md:w-[24rem] rounded-2xl py-1 px-4 md:px-0 flex items-center">
+        <span class="text-white w-14 bg-gradient-to-r from-violet-600 to-orange-400 px-2 rounded-2xl py-1 font-semibold">Team</span>
+        <span class="text-slate-300 font-semibold px-4 text-[0.8rem] md:text-[0.8rem]">FiberBlast</span>
+      </div>
+
+      <h1 class="text-6xl text-white w-full md:w-[43rem] text-center font-bold mt-10 px-4 md:px-0">
+        <span class="bg-gradient-to-r from-violet-600 to-orange-400 text-transparent bg-clip-text">FiberBlast</span>
+      </h1>
+
+      <section class="mt-10 md:mt-24 w-auto justify-center items-center flex flex-col">
+        <h3 class="text-4xl text-white w-full md:w-[43rem] text-center font-semibold mt-10 mb-10 px-4 md:px-0">
+          <span class="bg-gradient-to-r from-violet-600 to-orange-400 text-transparent bg-clip-text">Who</span> we are?
+        </h3>
+        <div class="flex flex-col md:flex-row w-full md:px-60 justify-center items-center">
+          <div class="rounded-lg bg-gradient-to-r from-violet-950 via-zinc-700 to-yellow-900 p-0.5 ml-5 w-full md:w-[24rem] h-auto mb-4 md:mb-0">
+            <div class="bg-neutral-950 text-slate-300 rounded-lg w-full h-full px-6 py-6 flex flex-col">
+              <span class="bg-zinc-900 hover:bg-slate-800 px-2 py-1 rounded-md text-slate-400 font-semibold w-16 text-center">#1</span>
+              <span class="text-white text-2xl mt-3">Tiberiu Petre "The visionary"</span>
+              <span class="text-slate-300 text-[0.8rem] mt-3">A chip design engineer, passionate about breaking things in order to find bugs. Tiberiu is skilled in developing simulation software that can generate hundreds of parallel universes in which a million things can go wrong so we can learn to make our universe better and safer</span>
+            </div>
+          </div>
+          <div class="rounded-lg bg-gradient-to-r from-violet-950 via-zinc-700 to-yellow-900 p-0.5 ml-5 w-full md:w-[24rem] h-auto mb-4 md:mb-0">
+            <div class="bg-neutral-950 text-slate-300 rounded-lg w-full h-full px-6 py-6 flex flex-col">
+              <span class="bg-zinc-900 hover:bg-slate-800 px-2 py-1 rounded-md text-slate-400 font-semibold w-16 text-center">#2</span>
+              <span class="text-white text-2xl mt-3">Radu Grozav "The Researcher"</span>
+              <span class="text-slate-300 text-[0.8rem] mt-3">A software developer with a curiosity for the field of defense. Radu is good at exhaustively exploring solutions and technologies to reach a specific goal. He was very successful in polishing our idea with original contributions and in depth research effort</span>
+            </div>
+          </div>
+          <div class="rounded-lg bg-gradient-to-r from-violet-950 via-zinc-700 to-yellow-900 p-0.5 ml-5 w-full md:w-[24rem] h-auto mb-4 md:mb-0">
+            <div class="bg-neutral-950 text-slate-300 rounded-lg w-full h-full px-6 py-6 flex flex-col">
+              <span class="bg-zinc-900 hover:bg-slate-800 px-2 py-1 rounded-md text-slate-400 font-semibold w-16 text-center">#3</span>
+              <span class="text-white text-2xl mt-3">Alex Pitton "The UI master"</span>
+              <span class="text-slate-300 text-[0.8rem] mt-3">A talented mobile and web developer with an impressive portfolio of apps, Alexandru creates the human interfaces for our ideas. He turns our vision into usable and understandable products with great impact to enhance user experiences and drive engagement</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="w-full mt-10 md:mt-12">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+        <div id="map" class="w-full h-[60vh] rounded-lg"></div>
+        <script type="module" src="/initMap.js"></script>
+      </div>
+    </section>
+
+    <!-- FOOTER (copied from index) -->
+    <section class="w-full flex justify-center items-center flex-col mt-20 px-4 md:px-0">
+      <div class="text-slate-300 grid grid-cols-1 md:grid-cols-3 gap-4 justify-items-center max-w-4xl w-full">
+        <div class="flex flex-col mb-4 md:mb-0 text-center md:text-left">
+          <span class="text-white text-2xl font-bold">Trap Alert</span>
+          <span class="text-sm mt-4"> Specializes in providing real-time updates on the placement of detcords and notifying users promptly </span>
+          <div class="flex py-5 gap-2 justify-center md:justify-start">
+            <!-- social svgs omitted for brevity; keep as in index if needed -->
+          </div>
+        </div>
+        <div class="flex flex-col mb-4 md:mb-0 text-center md:text-left">
+          <span class="text-lg text-white font-semibold">Company</span>
+          <span class="text-sm mt-3">Privacy Policy</span>
+          <span class="text-sm mt-2">Terms & Conditions</span>
+        </div>
+        <div class="flex flex-col text-center md:text-left">
+          <span class="text-lg text-white font-semibold">Support</span>
+          <span class="text-sm mt-3">About us</span>
+          <span class="text-sm mt-2">Contact us</span>
+          <span class="text-sm mt-2">Map</span>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
